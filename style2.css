@@ -68,7 +68,7 @@ h1 {
 .slider {
     width: 90%;
     max-width: 500px;
-    height: 60vh;
+    height: 80vh;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 2vw;
@@ -90,7 +90,7 @@ h1 {
     flex: 0 0 100%;
     width: 100%;      /* força largura total do container */
     height: auto;     /* altura proporcional à largura */
-    max-height: 60vh; /* limita sem cortar demais */
+    max-height: 80vh; /* limita sem cortar demais */
     object-fit: contain; /* mostra a imagem inteira */
 }
 
@@ -132,3 +132,4 @@ h1 {
         max-height: 50vh;
     }
 }
+
