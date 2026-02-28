@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BODY */
 body {
     height: 100vh;
     width: 100%;
@@ -23,32 +25,32 @@ body {
 .heart {
     position: absolute;
     bottom: -50px;
-    width: 18px;
-    height: 18px;
+    width: 1.2vw;
+    height: 1.2vw;
     background: #ff4da6;
     transform: rotate(45deg);
     animation: subir 10s linear infinite;
     opacity: 0.8;
-    box-shadow: 0 0 15px rgba(255, 77, 166, 0.6);
+    box-shadow: 0 0 0.8vw rgba(255, 77, 166, 0.6);
 }
 
 .heart::before,
 .heart::after {
     content: "";
     position: absolute;
-    width: 18px;
-    height: 18px;
+    width: 1.2vw;
+    height: 1.2vw;
     background: #ff4da6;
     border-radius: 50%;
 }
 
 .heart::before {
-    top: -9px;
+    top: -0.6vw;
     left: 0;
 }
 
 .heart::after {
-    left: -9px;
+    left: -0.6vw;
     top: 0;
 }
 
@@ -61,12 +63,12 @@ body {
 .carta {
     position: relative;
     z-index: 2;
-    padding: 50px;
+    padding: 5vw; /* padding proporcional à tela */
     max-width: 600px;
     width: 90%;
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(15px);
-    border-radius: 25px;
+    border-radius: 2vw; /* borda proporcional */
     border: 1px solid rgba(255,255,255,0.2);
     box-shadow: 0 20px 50px rgba(0,0,0,0.6);
     text-align: center;
@@ -79,10 +81,10 @@ body {
 /* Título com glow */
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.4em;
-    margin-bottom: 30px;
+    font-size: clamp(1.8rem, 5vw, 2.4rem); /* responsivo */
+    margin-bottom: 3vw;
     color: #ffd6ec;
-    text-shadow: 0 0 10px rgba(255,182,220,0.4);
+    text-shadow: 0 0 0.6vw rgba(255,182,220,0.4);
 }
 
 /* Seção da carta */
@@ -94,51 +96,52 @@ h1 {
 /* Mensagem destacada */
 #mensagem {
     display: none;
-    margin-top: 25px;
-    padding: 20px 25px;
+    margin-top: 3vw;
+    padding: 3vw;
     background: rgba(255,182,220,0.08);
-    border-left: 4px solid #ff4da6;
-    border-radius: 15px;
+    border-left: 0.5vw solid #ff4da6;
+    border-radius: 1.5vw;
     line-height: 1.6;
-    font-size: 15px;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
     color: #ffe6f5;
-    box-shadow: 0 10px 25px rgba(255,77,166,0.15);
+    box-shadow: 0 1vw 2.5vw rgba(255,77,166,0.15);
     animation: aparecerSuave 0.8s ease forwards;
     text-align: center; /* centraliza o texto */
 }
 
 /* Animação suave */
 @keyframes aparecerSuave {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(1vw); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 /* Botões */
 button {
-    margin-top: 15px;
-    padding: 12px 25px;
+    margin-top: 1.5vw;
+    padding: 2vw 5vw;
     border: none;
-    border-radius: 30px;
+    border-radius: 3vw;
     background: linear-gradient(45deg, #ff4da6, #ff85c1);
     color: white;
     cursor: pointer;
     font-weight: 600;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(255,77,166,0.4);
+    box-shadow: 0 0.8vw 2vw rgba(255,77,166,0.4);
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
 }
 
 button:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 25px rgba(255,77,166,0.6);
+    box-shadow: 0 1.2vw 2.5vw rgba(255,77,166,0.6);
 }
 
 /* Footer */
 footer {
     position: absolute;
-    bottom: 10px;
+    bottom: 1vw;
     width: 100%;
     text-align: center;
     color: rgba(255,255,255,0.6);
-    font-size: 14px;
+    font-size: clamp(0.7rem, 2vw, 1rem);
 }
